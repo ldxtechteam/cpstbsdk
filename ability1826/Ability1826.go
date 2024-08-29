@@ -2,12 +2,13 @@ package ability1826
 
 import (
 	"errors"
+	"github.com/ldxtechteam/cpstbsdk"
 	"github.com/ldxtechteam/cpstbsdk/ability1826/request"
 	"github.com/ldxtechteam/cpstbsdk/ability1826/response"
 	"github.com/ldxtechteam/cpstbsdk/util"
 	"log"
-github.com/ldxtechteam/cpstbsdk
 )
+
 type Ability1826 struct {
 	Client *topsdk.TopClient
 }

@@ -2,6 +2,7 @@ package ability304
 
 import (
 	"errors"
+	"github.com/ldxtechteam/cpstbsdk"
 	"github.com/ldxtechteam/cpstbsdk/ability304/request"
 	"github.com/ldxtechteam/cpstbsdk/ability304/response"
 	"github.com/ldxtechteam/cpstbsdk/util"
