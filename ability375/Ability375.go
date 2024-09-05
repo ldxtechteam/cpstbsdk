@@ -2,7 +2,6 @@ package ability375
 
 import (
 	"errors"
-	"github.com/ldxtechteam/cpstbsdk"
 	"github.com/ldxtechteam/cpstbsdk/ability375/request"
 	"github.com/ldxtechteam/cpstbsdk/ability375/response"
 	"github.com/ldxtechteam/cpstbsdk/util"
