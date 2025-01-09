@@ -2,6 +2,7 @@ package ability382
 
 import (
 	"errors"
+	"github.com/ldxtechteam/cpstbsdk"
 	"github.com/ldxtechteam/cpstbsdk/ability382/request"
 	"github.com/ldxtechteam/cpstbsdk/ability382/response"
 	"github.com/ldxtechteam/cpstbsdk/util"
