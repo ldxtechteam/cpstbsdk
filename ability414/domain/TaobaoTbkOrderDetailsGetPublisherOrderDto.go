@@ -228,11 +228,11 @@ type TaobaoTbkOrderDetailsGetPublisherOrderDto struct {
 
     /*
         付款预估佣金收入。解释：付款预估佣金收入=付款金额*佣金提成。以买家付款金额为基数，预估您可能获得的付款佣金收入，包含平台技术服务费金额（最终发钱时会减去平台技术服务费）。注意：因买家退款等原因，可能与结算预估佣金收入不一致。（特别说明：若想知道属于您名下的整体佣金收入，则整体付款佣金收入=付款预估佣金收入+平台专项服务费，为了简化展示报表，不再增加整体佣金收入字段，有需要的淘宝客可自行加和）     */
-    PubSharePreFeeForCommission  *string `json:"pub_share_pre_fee_for_commission,omitempty" `
+    PubSharePreFeeForCommission  *float64 `json:"pub_share_pre_fee_for_commission,omitempty" `
 
     /*
         结算预估佣金收入。解释：结算预估佣金收入=付款金额*佣金提成。以买家确认收货的付款金额为基数，预估您可能获得的结算佣金收入，包含技术服务费金额（最终发钱时会减去平台技术服务费）。注意：因买家退款、您违规推广等原因，可能与您最终收入不一致，最终收入以月结后您实际收到的为准。（特别说明：若想知道属于您名下的整体佣金收入，则整体结算佣金收入=结算预估佣金收入+平台专项服务费，为了简化展示报表，不再增加整体佣金收入字段，有需要的淘宝客可自行加和）     */
-    PubShareFeeForCommission  *string `json:"pub_share_fee_for_commission,omitempty" `
+    PubShareFeeForCommission  *float64 `json:"pub_share_fee_for_commission,omitempty" `
 
     /*
         补贴金额明细节点。解释：各补贴类型的类型名称、补贴比率、补贴金额、单笔补贴上限、补贴分成比率的详细说明     */
@@ -240,19 +240,19 @@ type TaobaoTbkOrderDetailsGetPublisherOrderDto struct {
 
     /*
         补贴分成比率。解释：从补贴中分得的收益比率     */
-    PubShareRateForSdy  *string `json:"pub_share_rate_for_sdy,omitempty" `
+    PubShareRateForSdy  *float64 `json:"pub_share_rate_for_sdy,omitempty" `
 
     /*
         补贴提成。解释：补贴提成=补贴比率*补贴分成比率。指实际获得的补贴收益比率     */
-    TkTotalRateForSdy  *string `json:"tk_total_rate_for_sdy,omitempty" `
+    TkTotalRateForSdy  *float64 `json:"tk_total_rate_for_sdy,omitempty" `
 
     /*
         付款预估补贴收入。解释：指以买家付款金额为基数，预估您可能获得的补贴收入。付款预估补贴收入=（付款金额*a补贴比率+付款金额*b补贴比率+……）*补贴分成比率。如果付款金额*a补贴比率＞补贴类型a单笔订单补贴上限，则付款金额*a补贴比率的值取补贴类型a单笔订单补贴上限，b补贴金额等其他类型补贴金额同理。注意：因买家退款等原因，可能与结算预估补贴收入不一致     */
-    PubSharePreFeeForSdy  *string `json:"pub_share_pre_fee_for_sdy,omitempty" `
+    PubSharePreFeeForSdy  *float64 `json:"pub_share_pre_fee_for_sdy,omitempty" `
 
     /*
         结算预估补贴收入。解释：以买家确认收货的付款金额为基数，预估您可能获得的结算补贴收入。结算预估补贴收入=（结算金额*a补贴比率+结算金额*b补贴比率+……）*补贴分成比率。如果结算金额*a补贴比率＞补贴类型a单笔订单补贴上限，则结算金额*a补贴比率的值取补贴类型a单笔订单补贴上限，b补贴金额等其他类型补贴金额同理。注意：因买家退款、您违规推广等原因，可能与您最终收入不一致，最终收入以月结后您实际收到的为准     */
-    PubShareFeeForSdy  *string `json:"pub_share_fee_for_sdy,omitempty" `
+    PubShareFeeForSdy  *float64 `json:"pub_share_fee_for_sdy,omitempty" `
 
     /*
         平台技术服务费明细节点。解释：各项平台技术服务费类型的类型名称、扣费比率、扣费金额的详细说明     */
@@ -496,11 +496,11 @@ func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetUntts(v string) *TaobaoTb
     s.Untts = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubSharePreFeeForCommission(v string) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
+func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubSharePreFeeForCommission(v float64) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
     s.PubSharePreFeeForCommission = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubShareFeeForCommission(v string) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
+func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubShareFeeForCommission(v float64) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
     s.PubShareFeeForCommission = &v
     return s
 }
@@ -508,19 +508,19 @@ func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetSubsidyInfoDtoList(v []Ta
     s.SubsidyInfoDtoList = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubShareRateForSdy(v string) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
+func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubShareRateForSdy(v float64) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
     s.PubShareRateForSdy = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetTkTotalRateForSdy(v string) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
+func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetTkTotalRateForSdy(v float64) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
     s.TkTotalRateForSdy = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubSharePreFeeForSdy(v string) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
+func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubSharePreFeeForSdy(v float64) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
     s.PubSharePreFeeForSdy = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubShareFeeForSdy(v string) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
+func (s *TaobaoTbkOrderDetailsGetPublisherOrderDto) SetPubShareFeeForSdy(v float64) *TaobaoTbkOrderDetailsGetPublisherOrderDto {
     s.PubShareFeeForSdy = &v
     return s
 }

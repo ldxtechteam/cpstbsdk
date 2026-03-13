@@ -4,15 +4,15 @@ package domain
 type TaobaoTbkOrderDetailsGetAlimmShareInfoDTO struct {
     /*
         技术服务费比率     */
-    AlimmTechServiceRate  *string `json:"alimm_tech_service_rate,omitempty" `
+    AlimmTechServiceRate  *float64 `json:"alimm_tech_service_rate,omitempty" `
 
     /*
         预估技术服务费     */
-    AlimmTechServicePreFee  *string `json:"alimm_tech_service_pre_fee,omitempty" `
+    AlimmTechServicePreFee  *float64 `json:"alimm_tech_service_pre_fee,omitempty" `
 
     /*
         结算技术服务费     */
-    AlimmTechServiceFee  *string `json:"alimm_tech_service_fee,omitempty" `
+    AlimmTechServiceFee  *float64 `json:"alimm_tech_service_fee,omitempty" `
 
     /*
         渠道专项服务费比率     */
@@ -28,15 +28,15 @@ type TaobaoTbkOrderDetailsGetAlimmShareInfoDTO struct {
 
 }
 
-func (s *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO) SetAlimmTechServiceRate(v string) *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO {
+func (s *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO) SetAlimmTechServiceRate(v float64) *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO {
     s.AlimmTechServiceRate = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO) SetAlimmTechServicePreFee(v string) *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO {
+func (s *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO) SetAlimmTechServicePreFee(v float64) *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO {
     s.AlimmTechServicePreFee = &v
     return s
 }
-func (s *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO) SetAlimmTechServiceFee(v string) *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO {
+func (s *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO) SetAlimmTechServiceFee(v float64) *TaobaoTbkOrderDetailsGetAlimmShareInfoDTO {
     s.AlimmTechServiceFee = &v
     return s
 }
